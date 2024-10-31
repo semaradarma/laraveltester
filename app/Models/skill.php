@@ -10,5 +10,5 @@ class skill extends Model
     use HasFactory;
 
 
-    protected $fillable = ['name', 'slug'];
+    protected $guarded = [];
 }

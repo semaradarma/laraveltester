@@ -6,8 +6,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'v1'], function () {
     Route::apiResource('skills', SkillController::class);
+    Route::put("/update-skills/{id}", [SkillController::class, 'updateSkills']);
+    Route::delete("/delete-skills/{id}",[SkillController::class, 'deleteSkills']);
 });
 
 Route::get('/', function () {
-    return response()->json(['message' => 'MANTAP']);
+    return response()->json(['message' => 'Success']);
 });
